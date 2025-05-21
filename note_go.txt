@@ -1,0 +1,20 @@
+1. go mod init github.com/muhammad-rifqi/go_rest_api
+2. Buat Folder dan buat file main.go yang berisikan seperti ini 
+package main
+
+import "github.com/gofiber/fiber/v2"
+
+func main() {
+	app := fiber.New()
+
+	app.Get("/", func(c *fiber.Ctx) error {
+		return c.SendString("Hello, World!")
+	})
+
+	app.Listen(":3000")
+}
+3. go get github.com/gofiber/fiber/v2
+
+
+go run main.go
+
